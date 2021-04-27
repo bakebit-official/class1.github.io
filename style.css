@@ -1,0 +1,342 @@
+/* GLOBAL */
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    background-color: rgb(191, 224, 199);
+    padding: 0px ;
+
+}
+
+.nav, .main, .footer{
+    margin:0px auto;
+        
+}
+
+
+
+/* GLOBAL END */
+
+/* NAV START */
+.nav{
+    height: 100px;
+    background-color:rgb(14, 75, 90) ;
+    width: 80%;
+    top:0px;
+    left: 10%;
+    position:fixed;
+    z-index: 1;
+    display: block;
+    
+}
+.logo{
+    margin:0px 0px 0px 30px;
+    padding:0px;
+    float: left;
+    
+}
+.logo h1{
+    padding: 0px;
+    color:white;
+}
+.menu{
+    float: right;
+    margin-top:20px;
+}
+.menu ul li{
+    list-style: none;
+    display: inline;
+
+}
+.menu ul li:not(:last-child){
+    margin-right: 50px;
+}
+.menu ul li:last-child{
+    margin-right: 20px;
+}
+.menu ul li a{
+    text-decoration: none;
+    position:relative;
+    transition: all .35s ease;
+    color:aquamarine;
+}
+.menu ul li a:hover::after{
+    content: ""; 
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: visible;
+    -webkit-transition: all 0.3s ease-in-out 0s; 
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    top:20px;
+}
+.menu ul li a:hover{
+    color:#fff
+}
+
+/* NAV END */
+
+
+/* MAIN SECTION */ 
+
+.main{
+    background-color: rgb(41, 167, 199);
+    width: 80%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 5.55%;
+
+    
+}
+
+.switch{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+
+.switch::after{
+    position: absolute;
+    content: '';
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    left:200px;
+}
+.switch:hover::after{
+    content: 'I LOVE YOU';
+    
+    background-color: yellow;
+}
+
+/* MAIN SECTION END */ 
+
+
+/*sidebar */
+
+.sidebar{
+    margin:0px 0px;
+    width: 15%;
+    height: 100vh;
+    background-color:  rgb(24, 110, 131);
+    position:fixed;
+    top:13.5%;
+}
+.sidebar{
+    padding:5px 10px;
+}
+.sidebar a{
+    display: block;
+    color: white;
+    margin: 20px 0px;
+    border:1px solid #fff;
+    padding:10px;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.sidebar a:hover{
+    background-color: blue;
+}
+
+.sidebar a:visited{
+    background-color: rgb(48, 48, 214);
+}
+.sidebar a:active{
+    background-color: rgb(135, 15, 182);
+}
+
+/*sidebar end*/
+
+/* content */
+
+.content {
+    height: auto;
+    width: 81.3%;
+    background-color: rgb(31, 138, 165);
+    margin-left: 18.7%;
+    position: relative;
+    padding: 0px;
+
+}
+/* Inside content */
+
+.content>div{
+      height: 100vh;
+    padding: 110px 10px;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+
+.block1{
+    background-color: rgb(118 212 134);
+}
+
+.block1 button{
+    border-radius:50%;
+    height: 100px;
+    width: 100px;
+    font-size:20px;
+    border:none;
+    background-color: orange;
+
+    transition: all 0.3s ease-in-out 0s;
+    position: relative;
+}
+
+.block1 button:hover{
+    background-color: rgb(255, 115, 0);
+
+}
+
+
+
+.block1 button:hover:after{
+    
+    content:'I LOVE YOU';
+     /* no need for qoutes */
+    color: #fff;
+    display: block;
+    position: absolute;
+    left: 123px; /* change this value to one that suits you */
+    top: 0px; 
+    background-color: rgb(211, 23, 23);
+    height: 100px;
+    width: 400px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 5rem;  
+    border-radius: 50px;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  
+    
+}
+
+@keyframes example {
+    from {background-color: rgb(187, 56, 56);}
+    to {background-color: rgb(192, 56, 219);}
+    25%  { left:200px; top:0px;}
+  }
+
+
+.block2{
+    background-color: rgb(216, 94, 89);
+    /* display: flex;   */
+}
+
+
+/* block 2 */
+
+.emoji {
+    padding: 3rem;
+    font-size: 6rem;
+    transform: scale(.5);
+    text-shadow: 0 2px 4px rgba(0,0,0,.3);
+    transition: 
+      text-shadow .2s ease-in-out,
+      transform .2s ease-in-out;
+  }
+  
+  .emoji:hover {
+    transform: scale(1) translatey(-20px);
+    text-shadow: 0 20px 20px rgba(0,0,0,.3);
+  }
+  
+  .emoji--happy:before {
+    content: '🙂';
+  }
+  
+  .emoji--happy:hover:before {
+    content: '😄';
+  }
+  
+  .emoji--sad:before {
+    content: '😕';
+  }
+  
+  .emoji--sad:hover:before {
+    content: '☹️';
+  }
+  
+  .emoji--crying:before {
+    content: '😥';
+  }
+  
+  .emoji--crying:hover:before {
+    content: '😰';
+  }
+  
+  .emoji--grimacing:before {
+    content: '😬';
+  }
+  
+  .emoji--grimacing:hover:before {
+    content: '😁';
+  }
+/* block 2 end */
+
+
+.block3{
+    background-color: rgb(54, 182, 221);
+}
+
+.flag-border{
+    height: 200px;
+    width: 500px;
+    background-color: green;
+    position: relative;
+    overflow: hidden;
+}
+.flag-circle{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: red;
+    top:50px;
+    left:200px;
+    position: absolute;
+
+}
+
+/* Inside content end */
+
+
+
+/* content end */
+
+
+
+/* Footer Section */
+.footer{
+    height: 100px;
+    width:80%;
+    background-color:rgb(14, 75, 90) ;
+    overflow: hidden;
+    z-index: 1;
+    position:relative;
+
+}
+.footer p{
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4rem;  
+}
+/* Footer END */
